@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
+body {
+    color: #444;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+.name h2 {
+    font-weight: 200;
+}
+
+.card {
+    margin-top: 30px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+.card:hover {
+    cursor: zoom-in;
+}
+
+.album-title {
+    min-height: 200px;
+    width: 100%;
+}
+
+.album-title h1 {
+    font-size: max(3vw, 1.5rem, 1rem);
+    /* font-size: 2.5rem; */
+    line-height: 1.5;
+    letter-spacing: 1.2rem;
+    font-weight: 100;
+}
+
+.profile-image {
+    border-radius: 100px;
+}
+
+.side-bar {
+    color: white;
+    background-color: #e8c3b9;
+    padding: 0px;
+    padding-top: 50px;
+    height: 100vh;
+    position: fixed;
+    z-index: 2;
+}
+
+.main {
+    min-height: 100vh;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.main a {
+    color: #444;
+    text-decoration: none;
+}
+
+.list-group-item {
+    color: white;
+    border: none;
+    background-color: inherit;
+}
+
+.list-group-item-action {
+    transition: all .01s ease-in-out;
+}
+
+.list-group-item-action:hover {
+    background-color: white;
+    transition: all .3s ease-in-out;
+}
+
+.active-list-item {
+    background-color: white;
+    color: #444;
+}
+
+.cover-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all .3s ease-in-out;
+}
+
+.cover-img:hover {
+    transform: scale(1.1);
+    /* filter: grayscale(80%); */
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.overlay-phone {}
+
+.overlay:hover~.cover-img {
+    transform: scale(1.1);
+    /* filter: grayscale(80%); */
+}
+
+.overlay:hover~.centered {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #444;
+    backdrop-filter: blur(5px);
+    transition: all .3s ease-in-out;
+}
+
+.wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    color: white;
+}
+
+.wrapper-full {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    color: white;
+}
+
+.wrapper .centered {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0);
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s ease-in-out;
+}
+
+.mobile-centered {
+    color: black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    max-height: 50%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper h1 {
+    font-weight: 200;
+    font-size: 3rem;
+}
+
+.cover-link {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.my-border {
+    border-top: 2px solid rgba(236, 239, 241, 1);
+    margin: 0px auto 0;
+    position: relative;
+    width: 50%;
+}
+
+.my-border:before {
+    background-color: #e8c3b9;
+    content: '';
+    height: 10px;
+    left: 50%;
+    margin-left: -50px;
+    position: absolute;
+    top: -4px;
+    width: 100px;
+}
+
+.my-border-side-bar {
+    border-top: 2px solid rgba(236, 239, 241, 1);
+    margin: 0px auto 0;
+    position: relative;
+    width: 30%;
+}
+
+#navbar-top a {
+    color: #292b2c;
+}
+
+.modal-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+@media only screen and (max-width: 767.98px) {
+    body {
+        padding-top: 50px;
+    }
+    .wrapper .centered {
+        display: none;
+    }
+    .side-bar {
+        display: none;
+    }
+    .my-border {
+        width: 90%;
+    }
+    .my-border:before {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #navbar-top {
+        display: none;
+    }
+    .mobile-centered {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .wrapper-full {
+        overflow: hidden;
+        width: 100%;
+        height: 500px;
+        position: relative;
+        color: white;
+    }
+}
